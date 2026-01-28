@@ -628,7 +628,7 @@ p:last-child {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: url('../images/caregiver-wheelchair.png') center center / cover no-repeat;
+  background: url('../images/admision-pro2.jpg') center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -642,8 +642,8 @@ p:last-child {
   height: 100%;
   background: linear-gradient(90deg,
       rgba(45, 106, 79, 0.95) 0%,
-      rgba(45, 106, 79, 0.9) 30%,
-      rgba(45, 106, 79, 0.7) 60%,
+      rgba(45, 106, 79, 0.9) 50%,
+      rgba(45, 106, 79, 0.8) 80%,
       rgba(45, 106, 79, 0) 100%);
   pointer-events: none;
   z-index: 1;
@@ -917,16 +917,21 @@ p:last-child {
 }
 
 .section-tag {
-  display: inline-block;
-  padding: var(--space-2) var(--space-6);
-  background: var(--color-primary-50);
-  color: var(--color-primary-dark);
-  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-radius: var(--radius-full);
+  letter-spacing: 2px;
   margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.section-tag svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .section-title {
@@ -1401,7 +1406,7 @@ p:last-child {
   align-items: center;
   padding: var(--space-20) 0;
   background-color: var(--color-white);
-  background-image: url('../images/caregiver-wheelchair.png');
+  background-image: url('../images/admision-pro.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1439,7 +1444,7 @@ p:last-child {
   max-width: 700px;
   /* Constrain content width */
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 
 .process-tagline {
@@ -1496,7 +1501,7 @@ p:last-child {
   right: 12.5%;
   /* End at center of last col */
   height: 1px;
-  background: var(--color-primary-light);
+  background: var(--color-secondary);
   /* Light green line */
   opacity: 0.5;
   z-index: 0;
@@ -1514,7 +1519,7 @@ p:last-child {
 .process-step-number {
   width: 50px;
   height: 50px;
-  background: var(--color-primary-dark);
+  background: var(--color-secondary);
   /* Dark green circle */
   border-radius: 50%;
   display: flex;
@@ -2528,5 +2533,503 @@ p:last-child {
   .pictorial-wrapper {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+  }
+}
+
+/* ============================================
+   ENHANCED MOBILE RESPONSIVENESS
+   ============================================ */
+
+/* Tablet Breakpoint (1024px and below) */
+@media (max-width: 1024px) {
+
+  /* Hero Section - Improve gradient coverage */
+  .hero::before {
+    width: 80%;
+  }
+
+  /* About Section Images */
+  .about-image-wrapper {
+    min-height: 400px;
+    padding-right: var(--space-8);
+  }
+
+  .about-image-back {
+    width: 60%;
+  }
+
+  .about-image-front {
+    width: 60%;
+    margin-left: 35%;
+    margin-top: 15%;
+  }
+
+  /* Why Choose Us - Collage */
+  .pic-main-img-wrapper {
+    height: 400px;
+  }
+
+  .pic-accent-img-wrapper {
+    width: 50%;
+    height: 200px;
+  }
+
+  /* Admission Process - 2 columns */
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .process-steps-grid::before {
+    display: none;
+  }
+
+  .process-content {
+    max-width: 100%;
+  }
+
+  .process-heading {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+/* Mobile Breakpoint (768px and below) */
+@media (max-width: 768px) {
+
+  /* ===== HERO SECTION - Full Green Background ===== */
+  .hero {
+    min-height: 100vh;
+    padding: var(--space-16) 0;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* Full gradient coverage on mobile */
+  .hero::before {
+    width: 100%;
+    background: linear-gradient(180deg,
+        rgba(45, 106, 79, 0.97) 0%,
+        rgba(45, 106, 79, 0.95) 40%,
+        rgba(45, 106, 79, 0.90) 70%,
+        rgba(45, 106, 79, 0.85) 100%);
+  }
+
+  .hero-inner {
+    padding: var(--space-8) 0;
+    min-height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-badge {
+    justify-content: center;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    line-height: 1.15;
+  }
+
+  .hero-text {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-6);
+    padding: 0 var(--space-2);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* ===== ABOUT SECTION - Hide One Image ===== */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-image-wrapper {
+    min-height: auto;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hide the back image on mobile */
+  .about-image-back {
+    display: none;
+  }
+
+  /* Make front image take center stage */
+  .about-image-front {
+    width: 85%;
+    max-width: 350px;
+    aspect-ratio: 4/5;
+    margin: 0 auto;
+    border-radius: var(--radius-xl);
+    border-width: 6px;
+    position: relative;
+  }
+
+  /* Reposition the stat badge */
+  .about-stat-badge {
+    top: auto;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .about-stat-badge::after {
+    display: none;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-tagline {
+    justify-content: center;
+  }
+
+  .about-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-quote {
+    text-align: left;
+  }
+
+  .about-list {
+    align-items: center;
+  }
+
+  .about-list-item {
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .about-footer-info {
+    justify-content: center;
+  }
+
+  /* ===== WHY CHOOSE US SECTION ===== */
+  .why-choose-section {
+    padding: var(--space-12) 0;
+  }
+
+  .pictorial-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .pic-collage {
+    padding: 0;
+    order: 1;
+  }
+
+  .pic-main-img-wrapper {
+    height: 280px;
+    border-radius: 24px;
+  }
+
+  /* Hide accent image on mobile for cleaner look */
+  .pic-accent-img-wrapper {
+    display: none;
+  }
+
+  .pic-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: -25px;
+    font-size: var(--font-size-sm);
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .pic-content {
+    order: 2;
+    text-align: center;
+  }
+
+  .pic-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .pic-header .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .clean-list {
+    gap: var(--space-5);
+  }
+
+  .clean-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  .clean-icon-box {
+    width: 56px;
+    height: 56px;
+  }
+
+  .clean-text h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .clean-text p {
+    font-size: var(--font-size-sm);
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* ===== ADMISSION PROCESS SECTION ===== */
+  .process-section {
+    padding: var(--space-12) 0;
+    min-height: auto;
+  }
+
+  /* Full white overlay on mobile for better readability */
+  .process-section::before {
+    width: 100%;
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(255, 255, 255, 0.92) 100%);
+  }
+
+  .process-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .process-tagline {
+    justify-content: center;
+  }
+
+  .process-heading {
+    font-size: var(--font-size-2xl);
+    line-height: 1.2;
+  }
+
+  .process-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-8);
+    padding: 0 var(--space-2);
+  }
+
+  /* Stack steps 2x2 on mobile */
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .process-steps-grid::before {
+    display: none;
+  }
+
+  .process-step-number {
+    width: 44px;
+    height: 44px;
+    font-size: var(--font-size-lg);
+  }
+
+  .process-step-title {
+    font-size: var(--font-size-base);
+  }
+
+  .process-step-desc {
+    font-size: var(--font-size-xs);
+    max-width: 150px;
+  }
+
+  /* ===== VALUES SECTION ===== */
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .value-card {
+    padding: var(--space-6);
+  }
+
+  .value-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .value-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* ===== STATS SECTION ===== */
+  .stats-section {
+    padding: var(--space-10) 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-sm);
+  }
+
+  /* ===== SERVICES SECTION ===== */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .service-card {
+    height: 380px;
+  }
+
+  .service-content {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: var(--space-6) var(--space-3) var(--space-3);
+  }
+
+  .service-icon-badge {
+    width: 48px;
+    height: 48px;
+    top: -24px;
+  }
+
+  .service-icon-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .service-title {
+    font-size: var(--font-size-lg);
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section {
+    padding: var(--space-12) 0;
+  }
+
+  .cta-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .cta-text {
+    font-size: var(--font-size-base);
+    padding: 0 var(--space-2);
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Small Mobile Breakpoint (480px and below) */
+@media (max-width: 480px) {
+
+  /* Hero refinements */
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1) var(--space-3);
+  }
+
+  /* About refinements */
+  .about-image-front {
+    width: 90%;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  /* Process steps - single column on very small screens */
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .process-step-item {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: rgba(45, 106, 79, 0.05);
+    border-radius: var(--radius-lg);
+  }
+
+  .process-step-number {
+    flex-shrink: 0;
+  }
+
+  .process-step-desc {
+    max-width: none;
+  }
+
+  /* Stats - single column */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .stat-item {
+    padding: var(--space-4);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+  }
+
+  /* Service cards */
+  .service-card {
+    height: 350px;
+  }
+
+  /* Why Choose Us */
+  .pic-main-img-wrapper {
+    height: 220px;
+  }
+
+  .clean-item {
+    padding: var(--space-4);
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-lg);
   }
 }
