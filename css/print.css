@@ -1,0 +1,115 @@
+/*
+ * INSPIRATION INN - Print Styles
+ */
+
+@media print {
+
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+    }
+
+    html {
+        font-size: 12pt;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    a[href^="#"]::after,
+    a[href^="javascript"]::after {
+        content: "";
+    }
+
+    .header,
+    .footer,
+    .nav,
+    .nav-toggle,
+    .btn,
+    .cta-section,
+    .hero-image,
+    .skip-link,
+    .footer-social,
+    form {
+        display: none !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+    }
+
+    p,
+    ul,
+    ol,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    h1 {
+        font-size: 24pt;
+        margin-bottom: 12pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+        margin-bottom: 10pt;
+    }
+
+    h3 {
+        font-size: 14pt;
+        margin-bottom: 8pt;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .section {
+        padding: 20pt 0;
+    }
+
+    .grid,
+    .grid-2,
+    .grid-3,
+    .features-grid,
+    .services-grid {
+        display: block;
+    }
+
+    .card,
+    .feature-card,
+    .service-card {
+        border: 1px solid #ccc;
+        padding: 10pt;
+        margin-bottom: 10pt;
+    }
+
+    .accordion-content {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}

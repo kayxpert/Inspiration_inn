@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apply for positions at Inspiration Inn. Join our team of dedicated care professionals supporting adults with disabilities.">
+    <title>Job Details | Inspiration Inn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><span class="logo-icon">II</span><span>Inspiration Inn</span></a>
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="careers.html" class="nav-link active">Careers</a></li>
+                        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+                </nav>
+                <button class="nav-toggle"
+                    aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <a href="careers.html">Careers</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span>Apply</span>
+                    </nav>
+                    <h1 class="page-hero-title">Job Application</h1>
+                    <p class="page-hero-text">Join our team of dedicated care professionals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Details Section -->
+        <section class="section section-lg">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content fade-in">
+                        <span class="section-tag">Position Details</span>
+                        <h2 id="job-title">Direct Support Professional (DSP)</h2>
+                        <p class="text-lead about-text">
+                            Make a meaningful difference in the lives of adults with disabilities by providing
+                            compassionate, person-centered care in a supportive group home environment.
+                        </p>
+
+                        <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Responsibilities</h3>
+                        <ul style="list-style: disc; padding-left: var(--space-6); color: var(--color-text-secondary);">
+                            <li>Provide direct care and support to residents in daily activities</li>
+                            <li>Assist with personal care, meal preparation, and medication reminders</li>
+                            <li>Support residents in community activities and outings</li>
+                            <li>Document care activities and maintain accurate records</li>
+                            <li>Communicate with team members and families</li>
+                        </ul>
+
+                        <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Requirements</h3>
+                        <ul style="list-style: disc; padding-left: var(--space-6); color: var(--color-text-secondary);">
+                            <li>High school diploma or equivalent</li>
+                            <li>Experience in disability support preferred</li>
+                            <li>Valid driver's license</li>
+                            <li>Ability to pass background check</li>
+                            <li>CPR/First Aid certification (or willingness to obtain)</li>
+                        </ul>
+
+                        <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Schedule</h3>
+                        <p style="color: var(--color-text-secondary);">
+                            Full-time and part-time positions available. Various shifts including days, evenings,
+                            weekends, and overnight opportunities.
+                        </p>
+                    </div>
+
+                    <!-- Application Form -->
+                    <div class="card fade-in fade-in-delay-2" style="padding: var(--space-6);">
+                        <h3 style="margin-bottom: var(--space-4); color: var(--color-primary);">Apply for This Position
+                        </h3>
+                        <form id="application-form" class="contact-form">
+                            <!-- Hidden field for position -->
+                            <input type="hidden" id="position" name="position" value="">
+
+                            <div class="form-row"
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="availability" class="form-label">Availability *</label>
+                                <select id="availability" name="availability" class="form-input form-select" required>
+                                    <option value="">Select availability</option>
+                                    <option value="full-time">Full-time</option>
+                                    <option value="part-time">Part-time</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="resume" class="form-label">Upload Resume (PDF, DOC, DOCX)</label>
+                                <input type="file" id="resume" name="resume" class="form-input" accept=".pdf,.doc,.docx"
+                                    style="padding: var(--space-3);">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="coverLetter" class="form-label">Upload Cover Letter (Optional)</label>
+                                <input type="file" id="coverLetter" name="coverLetter" class="form-input"
+                                    accept=".pdf,.doc,.docx" style="padding: var(--space-3);">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Additional Information</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" rows="3"
+                                    placeholder="Anything else you'd like us to know?"></textarea>
+                            </div>
+
+                            <div class="form-group"
+                                style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <input type="checkbox" id="consent" name="consent" required style="margin-top: 4px;">
+                                <label for="consent"
+                                    style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+                                    I consent to Inspiration Inn collecting and storing my information for recruitment
+                                    purposes.
+                                    I understand my data will be handled in accordance with the privacy policy.
+                                </label>
+                            </div>
+
+                            <div style="text-align: center; margin-top: var(--space-4);">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2 class="cta-title">Questions About the Position?</h2>
+                    <p class="cta-text">Contact our HR team for more information about this opportunity.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-white btn-lg">Contact Us</a>
+                        <a href="careers.html" class="btn btn-outline btn-lg"
+                            style="border-color: white; color: white;">View All Positions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="footer-logo-icon">II</span><span>Inspiration
+                            Inn</span></a>
+                    <p class="footer-text">Providing compassionate residential care for adults with disabilities.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-details.html#residential">Residential Living</a></li>
+                        <li><a href="service-details.html#daily">Daily Living Support</a></li>
+                        <li><a href="service-details.html#skills">Life Skills Training</a></li>
+                        <li><a href="service-details.html#health">Health & Wellness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg><span>123 Care Street, Cityville, ST 12345</span></div>
+                    <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg><span>(555) 123-4567</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 Inspiration Inn. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
